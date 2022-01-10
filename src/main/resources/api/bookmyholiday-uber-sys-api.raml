@@ -1,0 +1,36 @@
+#%RAML 1.0
+title: bookmyholiday-uber-sys-api
+
+uses: 
+  carbooking_lib: exchange_modules/152d1991-08cd-4b6e-a747-9013bbff4bce/bookmyholiday-library/1.0.0/bookmyholiday-library.raml
+  
+/uber:
+  get:
+    description: get cars available from uber partner
+    is: carbooking_lib.error_responses_trait
+      
+    responses:
+      200:
+        body:
+          application/json:
+            examples:
+              type: carbooking_lib.get_carbooking_response_datatype[]
+              output: !include exchange_modules/152d1991-08cd-4b6e-a747-9013bbff4bce/get_carbooking_response_example/1.0.0/get_carbooking_response_example.raml
+
+  post:
+    description: book a car with uber partner
+    is:
+      - carbooking_lib.error_responses_trait
+    body:
+      application/json:
+        type: carbooking_lib.post_carbooking_request_datatype
+        examples:
+          input: !include exchange_modules/152d1991-08cd-4b6e-a747-9013bbff4bce/post_carbooking_request_example/1.0.0/post_carbooking_request_example.raml
+    responses:
+      201:
+        body:
+          application/json:
+            example:
+              {
+                message: Uber car booked!!
+              }

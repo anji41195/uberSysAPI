@@ -1,0 +1,21 @@
+pipeline {
+  agent any
+  stages {
+    stage('Build') {
+      steps {
+	         git 'https://github.com/anji41195/uberSysAPI.git'
+            bat 'mvn clean package deploy -DskipMunitTests -DmuleDeploy -DmuleVersion=4.4.0 -Dusername=AnjiTrialAccount1 -Dpassword=Anjali@123 -DapplicationName=bookmyholiday-uber-sys-api -Denvironment=Sandbox -DbusinessGroup="Apisero" -DworkerType=MICRO'
+      }
+    }
+	
+	
+	 stage('Deploy') {
+      steps {
+	         git 'https://github.com/anji41195/uberSysAPI.git'
+            bat 'mvn clean package deploy -DskipMunitTests -DmuleDeploy -DmuleVersion=4.4.0 -Dusername=AnjiTrialAccount1 -Dpassword=Anjali@123 -DapplicationName=bookmyholiday-uber-sys-api -Denvironment=Sandbox -DbusinessGroup="Apisero" -DworkerType=MICRO'
+      }
+    }
+	
+	}
+	
+}

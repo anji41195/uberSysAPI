@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:munit="http://www.mulesoft.org/schema/mule/munit" xmlns:munit-tools="http://www.mulesoft.org/schema/mule/munit-tools"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xsi:schemaLocation="
+		http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+		http://www.mulesoft.org/schema/mule/munit http://www.mulesoft.org/schema/mule/munit/current/mule-munit.xsd
+		http://www.mulesoft.org/schema/mule/munit-tools  http://www.mulesoft.org/schema/mule/munit-tools/current/mule-munit-tools.xsd">
+	<munit:config name="implementation-test-suite.xml" />
+	<munit:test name="implementation-test-suite-getUberCarsAvailabilityDetailsTest" doc:id="8a5965e2-e918-4ad7-82e8-38d437ba12c7" description="Test">
+		<munit:execution >
+			<flow-ref doc:name="Flow-ref to getUberCarsAvailabilityDetails" doc:id="fd8e6121-d2aa-4e60-91d5-75256e7892e7" name="getUberCarsAvailabilityDetails"/>
+		</munit:execution>
+	</munit:test>
+	<munit:test name="implementation-test-suite-postUberCarBookingDetailsTest" doc:id="6e0996f9-1f55-4e56-8b90-4dfbc1b7037e" description="Test">
+		<munit:execution >
+			<flow-ref doc:name="Flow-ref to postUberCarBookingDetails" doc:id="e06d64ba-0b5c-46ae-9f3f-5993db7cdff1" name="postUberCarBookingDetails"/>
+		</munit:execution>
+	</munit:test>
+
+
+</mule>

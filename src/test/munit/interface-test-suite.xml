@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:munit="http://www.mulesoft.org/schema/mule/munit" xmlns:munit-tools="http://www.mulesoft.org/schema/mule/munit-tools"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xsi:schemaLocation="
+		http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+		http://www.mulesoft.org/schema/mule/munit http://www.mulesoft.org/schema/mule/munit/current/mule-munit.xsd
+		http://www.mulesoft.org/schema/mule/munit-tools  http://www.mulesoft.org/schema/mule/munit-tools/current/mule-munit-tools.xsd">
+	<munit:config name="interface-test-suite.xml" />
+	<munit:test name="interface-test-suite-bookmyholiday-uber-sys-api-mainTest" doc:id="00ea9462-965b-4d5e-81f9-5d8903f175d5" description="Test">
+		<munit:execution >
+			<flow-ref doc:name="Flow-ref to bookmyholiday-uber-sys-api-main" doc:id="75fc94e3-8d37-4298-8fa0-a3570117796d" name="bookmyholiday-uber-sys-api-main"/>
+		</munit:execution>
+	</munit:test>
+	<munit:test name="interface-test-suite-get:\uber:bookmyholiday-uber-sys-api-configTest" doc:id="8b894731-8044-47a2-8469-6992f29b3604" description="Test">
+		<munit:execution >
+			<flow-ref doc:name="Flow-ref to get:\uber:bookmyholiday-uber-sys-api-config" doc:id="adc05299-0c72-4169-9224-46c4858fa21a" name="get:\uber:bookmyholiday-uber-sys-api-config"/>
+		</munit:execution>
+	</munit:test>
+	<munit:test name="interface-test-suite-post:\uber:application\json:bookmyholiday-uber-sys-api-configTest" doc:id="d201eefe-4c59-402d-9897-42dc0d8f12c5" description="Test">
+		<munit:execution >
+			<flow-ref doc:name="Flow-ref to post:\uber:application\json:bookmyholiday-uber-sys-api-config" doc:id="eab5d7c8-31fc-4895-a853-374a19667eb6" name="post:\uber:application\json:bookmyholiday-uber-sys-api-config"/>
+		</munit:execution>
+	</munit:test>
+
+
+</mule>
